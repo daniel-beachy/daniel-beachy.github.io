@@ -1,6 +1,16 @@
 body {
     padding: 50px;
     text-align: center;
-    background-color: #d5c4b4;
+    background-color: #454d66;
     color: white;
+}
+
+.header {
+    font-size: 4em;
+    margin-bottom: 0px;
+    color: #efeeb4;
+}
+
+.subheader {
+    font-size: 2em;
 }
