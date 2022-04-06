@@ -1,0 +1,20 @@
+.black-square {
+    height: 50px;
+    width: 50px;
+    border: solid black;
+    background-color: darkgreen;
+}
+
+.white-square {
+    height: 50px;
+    width: 50px;
+    border: solid black;
+    background-color: papayawhip;
+}
+
+#chessContainer {
+    border: 3px;
+    margin: auto;
+    max-height: 300px;
+    max-width: 300px;
+}
