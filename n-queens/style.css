@@ -1,14 +1,15 @@
-.black-square {
+.square {
     height: 50px;
     width: 50px;
     border: solid black;
+    text-align: center;
+}
+
+.black-square {
     background-color: darkgreen;
 }
 
 .white-square {
-    height: 50px;
-    width: 50px;
-    border: solid black;
     background-color: papayawhip;
 }
 
