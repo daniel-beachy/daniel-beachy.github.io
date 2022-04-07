@@ -1,6 +1,9 @@
 function setupBoard(board_size) {
-    const center = document.createElement('center');
+    const center = document.createElement('div');
+    center.setAttribute('id', 'center')
+
     const board = document.createElement('table');
+    board.setAttribute('id', 'board')
 
     for (let i = 0; i < board_size; i++) {
         const newRow = document.createElement('tr');
@@ -22,9 +25,12 @@ function setupBoard(board_size) {
     }
 
     center.append(board)
-// TODO - figure out how to scale board
-// center.setAttribute('id', 'chessContainer')
     document.body.append(center)
+}
+
+function clearBoard() {
+    let center = document.getElementById('center')
+    center.parentNode.removeChild(center)
 }
 
 function getSquare(rank, file) {
@@ -127,6 +133,7 @@ function createBoard(n) {
 }
 
 function run(n) {
+    clearBoard()
     setupBoard(n)
 
     let newBoard = createBoard(n)
@@ -134,4 +141,8 @@ function run(n) {
     console.log(newBoard)
 }
 
-run(8)
+function userSize() {
+    let size = document.getElementById('size').value
+
+    run(size)
+}
