@@ -1,11 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+<a href="http://daniel-beachy.github.io/sorting">SORTING</a>;
+<a href="http://daniel-beachy.github.io/nqueens">NQUEENS</a>;
