@@ -1,5 +1,7 @@
 import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import github from "../img/github.png";
+import linkedin from "../img/linkedin.png";
 
 const Header = () => {
   return (
@@ -15,6 +17,14 @@ const Header = () => {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
+        <div className="social-icon d-flex">
+          <a href="https://www.linkedin.com/in/daniel-beachy/">
+            <img className="px-2" src={linkedin} alt="" height={25} />
+          </a>
+          <a href="https://github.com/daniel-beachy">
+            <img className="px-2" src={github} alt="" height={25} />
+          </a>
+        </div>
       </Container>
     </Navbar>
   );
