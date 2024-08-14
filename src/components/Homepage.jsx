@@ -1,7 +1,8 @@
 import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Container } from "react-bootstrap";
 import Header from "./Header";
 import Welcome from "./Welcome";
+import Projects from "./Projects";
 
 const Homepage = () => {
   return (
@@ -9,6 +10,7 @@ const Homepage = () => {
       <Row>
         <Header />
         <Welcome />
+        <Projects />
       </Row>
       <Row className="flex-grow-1 bg-secondary"></Row>
     </Container>
