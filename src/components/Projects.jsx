@@ -19,16 +19,13 @@ const Projects = () => {
   ];
 
   return (
-    <Container
-      fluid
-      className="d-flex align-items-center justify-content-center vh-100 bg-dark"
-    >
-      <Row>
-        <Col size={12}>
-          <Row id="projectsList">
-            {projects.map((project, index) => {
-              return <ProjectCard key={index} {...project} />;
-            })}
+    <Container fluid className="bg-dark">
+      <Row className="align-items-center" style={{ minHeight: "100vh" }}>
+        <Col>
+          <Row id="projectsList" className="d-flex justify-content-center">
+            {projects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
           </Row>
         </Col>
       </Row>
