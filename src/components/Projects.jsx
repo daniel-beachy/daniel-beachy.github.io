@@ -19,9 +19,9 @@ const Projects = () => {
   ];
 
   return (
-    <Container fluid className="bg-dark">
+    <Container fluid className="bg-dark p-4">
       <Row className="align-items-center" style={{ minHeight: "100vh" }}>
-        <Col>
+        <Col className="px-4">
           <Row id="projectsList" className="d-flex justify-content-center">
             {projects.map((project, index) => (
               <ProjectCard key={index} {...project} />

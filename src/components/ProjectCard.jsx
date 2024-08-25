@@ -3,7 +3,10 @@ import { Card, Button } from "react-bootstrap";
 
 const ProjectCard = ({ imgUrl, title, buttonUrl }) => {
   return (
-    <Card style={{ width: "24rem" }} className="bg-primary m-4 text-light-blue">
+    <Card
+      style={{ width: "24rem" }}
+      className="bg-primary m-4 p-0 text-light-blue"
+    >
       <Card.Body className="d-flex flex-column align-items-center justify-content-between">
         <Card.Title>{title}</Card.Title>
         <img
