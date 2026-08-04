@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../img/profile-dark-bg.png";
+import profile from "../img/profile-dark-bg.webp";
 import { Row, Col, Container } from "react-bootstrap";
 
 const Welcome = () => {
