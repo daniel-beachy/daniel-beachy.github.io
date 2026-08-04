@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCard";
 import nqueens from "../img/nqueens-image.png";
 import sorting from "../img/sorting-image.png";
+import nflTracker from "../img/nfl-tracker-image.png";
 
 const Projects = () => {
   const projects = [
@@ -15,6 +16,11 @@ const Projects = () => {
       imgUrl: sorting,
       title: "Sorting Visualizer",
       buttonUrl: "sorting",
+    },
+    {
+      imgUrl: nflTracker,
+      title: "NFL Season Tracker",
+      buttonUrl: "nfl-season-tracker-2026/",
     },
   ];
 
