@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 import nqueens from "../img/nqueens-image.png";
 import sorting from "../img/sorting-image.png";
 import nflTracker from "../img/nfl-tracker-image.png";
-import knotwright from "../img/knotwright-image.png";
+import flossforge from "../img/flossforge-image.png";
 
 const Projects = () => {
   const projects = [
@@ -24,9 +24,9 @@ const Projects = () => {
       buttonUrl: "nfl-season-tracker-v2/",
     },
     {
-      imgUrl: knotwright,
-      title: "Knotwright",
-      buttonUrl: "knotwright/",
+      imgUrl: flossforge,
+      title: "FlossForge",
+      buttonUrl: "flossforge/",
     },
   ];
 
