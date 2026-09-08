@@ -21,7 +21,7 @@ const Projects = () => {
     {
       imgUrl: nflTracker,
       title: "NFL Season Tracker",
-      buttonUrl: "nfl-season-tracker-v2/",
+      buttonUrl: "nfl-season-tracker-v3/",
     },
     {
       imgUrl: flossforge,
