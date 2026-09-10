@@ -5,6 +5,7 @@ import nqueens from "../img/nqueens-image.png";
 import sorting from "../img/sorting-image.png";
 import nflTracker from "../img/nfl-tracker-image.png";
 import flossforge from "../img/flossforge-image.png";
+import sundayHq from "../img/sunday-hq-image.png";
 
 const Projects = () => {
   const projects = [
@@ -27,6 +28,11 @@ const Projects = () => {
       imgUrl: flossforge,
       title: "FlossForge",
       buttonUrl: "flossforge/",
+    },
+    {
+      imgUrl: sundayHq,
+      title: "Sunday HQ",
+      buttonUrl: "https://fantasy-dashboard-v1.daniel-beachy.workers.dev/",
     },
   ];
 
