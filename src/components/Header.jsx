@@ -1,31 +1,44 @@
 import React from "react";
-import { Container, Navbar } from "react-bootstrap";
 import github from "../img/github.png";
 import linkedin from "../img/linkedin.png";
 
 const Header = () => {
   return (
-    <Navbar expand="lg" className="navbar-dark bg-dark m-0">
-      <Container fluid className="d-flex justify-content-between mx-4">
-        <Navbar.Brand>Daniel Beachy</Navbar.Brand>
-        <div className="social-icon d-flex">
+    <header className="site-nav">
+      <div className="nav-inner">
+        <a className="nav-name" href="#top" aria-label="Back to top">
+          Daniel Beachy
+        </a>
+        <nav className="nav-links" aria-label="Main navigation">
+          <button
+            type="button"
+            onClick={() =>
+              document
+                .getElementById("projectsList")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Projects
+          </button>
           <a
             href="https://www.linkedin.com/in/daniel-beachy/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn profile"
           >
-            <img className="px-2" src={linkedin} alt="" height={25} />
+            <img src={linkedin} alt="" />
           </a>
           <a
             href="https://github.com/daniel-beachy"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub profile"
           >
-            <img className="px-2" src={github} alt="" height={25} />
+            <img src={github} alt="" />
           </a>
-        </div>
-      </Container>
-    </Navbar>
+        </nav>
+      </div>
+    </header>
   );
 };
 

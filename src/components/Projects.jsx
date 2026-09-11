@@ -51,9 +51,7 @@ const Projects = () => {
     <section id="projectsList" className="projects-section">
       <div className="projects-container">
         <header className="projects-heading">
-          <p>Things I’ve made</p>
-          <h2>Some projects I had fun building.</h2>
-          <span>A mix of useful tools, experiments, and ideas I wanted to try.</span>
+          <h2>Personal projects</h2>
         </header>
         <div className="projects-grid">
           {projects.map((project) => (

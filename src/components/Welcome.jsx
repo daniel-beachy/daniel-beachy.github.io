@@ -1,60 +1,43 @@
 import React from "react";
 import profile from "../img/profile-dark-bg.webp";
-import { Row, Col, Container } from "react-bootstrap";
 
 const Welcome = () => {
   return (
-    <Container
-      fluid
-      className="d-flex  justify-content-center bg-secondary text-light-blue"
-    >
-      <Row
-        style={{ minHeight: "100vh" }}
-        className="text-center align-items-center"
-      >
-        <Col>
-          <img
-            src={profile}
-            alt=""
-            style={{
-              maxHeight: "60vh",
-              objectFit: "contain",
-              borderRadius: "25px",
-              width: "100%",
-              padding: "25px",
-            }}
-          />
-          <h1 style={{ fontSize: "4rem" }}>Hello! I'm Daniel</h1>
-          <Row className="justify-content-center mb-4">
-            <button
-              type="button"
-              className="btn btn-primary mt-2 mx-4"
-              style={{ maxWidth: "200px" }}
-              onClick={() =>
-                window.open(
-                  "https://github.com/daniel-beachy/daniel-beachy.github.io/blob/main/resume.png?raw=true",
-                  "_blank"
-                )
-              }
-            >
-              See Resume
-            </button>
-            <button
-              type="button"
-              className="btn btn-primary mt-2 mx-4"
-              style={{ maxWidth: "200px" }}
-              onClick={() =>
-                document
-                  .getElementById("projectsList")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              View Projects
-            </button>
-          </Row>
-        </Col>
-      </Row>
-    </Container>
+    <section id="top" className="hero-section">
+      <div className="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div className="hero-glow hero-glow-two" aria-hidden="true"></div>
+      <div className="hero-content">
+        <div className="portrait-frame">
+          <img src={profile} alt="Daniel Beachy" />
+        </div>
+        <p className="hero-kicker">Hi, I’m Daniel.</p>
+        <h1>I like making things for the web.</h1>
+        <p className="hero-copy">
+          This is where I keep a few projects I’ve built for fun.
+        </p>
+        <div className="hero-actions">
+          <button
+            type="button"
+            className="hero-button hero-button-primary"
+            onClick={() =>
+              document
+                .getElementById("projectsList")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            See my projects <span aria-hidden="true">↓</span>
+          </button>
+          <a
+            className="hero-button hero-button-secondary"
+            href="https://github.com/daniel-beachy/daniel-beachy.github.io/blob/main/resume.png?raw=true"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
   );
 };
 
