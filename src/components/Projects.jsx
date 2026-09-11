@@ -6,6 +6,7 @@ import sorting from "../img/sorting-image.png";
 import nflTracker from "../img/nfl-tracker-image.png";
 import flossforge from "../img/flossforge-image.png";
 import sundayHq from "../img/sunday-hq-image.png";
+import secretSanta from "../img/secret-santa-coordinator-image.png";
 
 const Projects = () => {
   const projects = [
@@ -33,6 +34,11 @@ const Projects = () => {
       imgUrl: sundayHq,
       title: "Sunday HQ",
       buttonUrl: "https://fantasy-dashboard-v1.daniel-beachy.workers.dev/",
+    },
+    {
+      imgUrl: secretSanta,
+      title: "Secret Santa Coordinator",
+      buttonUrl: "https://secret-santa-coordinator-v1.daniel-beachy.workers.dev/",
     },
   ];
 

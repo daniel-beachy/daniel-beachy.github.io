@@ -13,8 +13,8 @@ const ProjectCard = ({ imgUrl, title, buttonUrl }) => {
           src={imgUrl}
           alt=""
           style={{
-            maxHeight: "60vh",
-            objectFit: "contain",
+            aspectRatio: "16 / 9",
+            objectFit: "cover",
             borderRadius: "4px",
             width: "100%",
             marginBottom: "8px",

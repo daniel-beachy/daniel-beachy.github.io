@@ -9,7 +9,22 @@ test("the NFL Season Tracker project opens the current dashboard", () => {
     const card = screen.getByText("NFL Season Tracker").closest(".card");
     fireEvent.click(within(card).getByRole("button", { name: "Try it!" }));
     expect(open).toHaveBeenCalledWith("nfl-season-tracker-v3/", "_self");
-    expect(screen.getAllByRole("button", { name: "Try it!" })).toHaveLength(5);
+    expect(screen.getAllByRole("button", { name: "Try it!" })).toHaveLength(6);
+  } finally {
+    open.mockRestore();
+  }
+});
+
+test("Secret Santa Coordinator opens the Cloudflare app", () => {
+  const open = jest.spyOn(window, "open").mockImplementation(() => null);
+  try {
+    render(<Projects />);
+    const card = screen.getByText("Secret Santa Coordinator").closest(".card");
+    fireEvent.click(within(card).getByRole("button", { name: "Try it!" }));
+    expect(open).toHaveBeenCalledWith(
+      "https://secret-santa-coordinator-v1.daniel-beachy.workers.dev/",
+      "_self"
+    );
   } finally {
     open.mockRestore();
   }
