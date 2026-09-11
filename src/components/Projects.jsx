@@ -13,49 +13,37 @@ const Projects = () => {
       imgUrl: nqueens,
       title: "N-Queens",
       buttonUrl: "nqueens",
-      description:
-        "An interactive look at the classic backtracking problem, with every placement visualized.",
-      tags: ["Algorithms", "Visualization"],
+      description: "A little visual solver for the N-Queens puzzle.",
     },
     {
       imgUrl: sorting,
       title: "Sorting Visualizer",
       buttonUrl: "sorting",
-      description:
-        "Watch sorting algorithms work step by step and compare how each approach moves data.",
-      tags: ["Algorithms", "Interactive"],
+      description: "Sorting bars, but more fun to watch than it sounds.",
     },
     {
       imgUrl: nflTracker,
       title: "NFL Season Tracker",
       buttonUrl: "nfl-season-tracker-v3/",
-      description:
-        "A data-rich dashboard for following teams, trends, standings, and the season at a glance.",
-      tags: ["Data", "Dashboard"],
+      description: "A place to keep an eye on the NFL season and how it is shaping up.",
     },
     {
       imgUrl: flossforge,
       title: "FlossForge",
       buttonUrl: "flossforge/",
-      description:
-        "A focused workspace for planning fiber projects, colors, dimensions, and materials.",
-      tags: ["Design tools", "Productivity"],
+      description: "Describe a friendship bracelet and get instructions for making it.",
     },
     {
       imgUrl: sundayHq,
       title: "Sunday HQ",
       buttonUrl: "https://fantasy-dashboard-v1.daniel-beachy.workers.dev/",
-      description:
-        "One command center for fantasy football leagues, matchups, players, and weekly decisions.",
-      tags: ["Cloudflare", "Sports data"],
+      description: "All the fantasy football stuff I want to see on Sundays.",
     },
     {
       imgUrl: secretSanta,
       title: "Secret Santa Coordinator",
       buttonUrl: "https://secret-santa-coordinator-v1.daniel-beachy.workers.dev/",
-      description:
-        "A private, constraint-aware exchange builder with secure participant-only reveals.",
-      tags: ["Workers", "D1"],
+      description: "Set up a Secret Santa without anyone accidentally seeing the whole list.",
     },
   ];
 
@@ -63,12 +51,9 @@ const Projects = () => {
     <section id="projectsList" className="projects-section">
       <div className="projects-container">
         <header className="projects-heading">
-          <p>Selected work</p>
-          <h2>Projects built to be used.</h2>
-          <span>
-            Practical tools, thoughtful interfaces, and a little algorithmic
-            curiosity.
-          </span>
+          <p>Things I’ve made</p>
+          <h2>Some projects I had fun building.</h2>
+          <span>A mix of useful tools, experiments, and ideas I wanted to try.</span>
         </header>
         <div className="projects-grid">
           {projects.map((project) => (

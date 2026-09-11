@@ -1,5 +1,5 @@
 import React from "react";
-const ProjectCard = ({ imgUrl, title, buttonUrl, description, tags }) => {
+const ProjectCard = ({ imgUrl, title, buttonUrl, description }) => {
   return (
     <article className="card project-card">
       <div className="project-media">
@@ -15,11 +15,6 @@ const ProjectCard = ({ imgUrl, title, buttonUrl, description, tags }) => {
           <p>{description}</p>
         </div>
         <div className="project-footer">
-          <ul className="project-tags" aria-label={`${title} technologies`}>
-            {tags.map((tag) => (
-              <li key={tag}>{tag}</li>
-            ))}
-          </ul>
           <button
             className="project-link"
             onClick={() => window.open(buttonUrl, "_self")}

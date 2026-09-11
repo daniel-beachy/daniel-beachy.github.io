@@ -18,9 +18,9 @@ $theme-colors: (
   padding: clamp(5rem, 9vw, 8rem) 1.5rem;
   color: #edf4f7;
   background:
-    radial-gradient(circle at 10% 10%, rgba(75, 115, 153, 0.22), transparent 30rem),
-    radial-gradient(circle at 90% 85%, rgba(78, 151, 145, 0.12), transparent 28rem),
-    #14232c;
+    radial-gradient(circle at 10% 10%, rgba(75, 115, 153, 0.12), transparent 30rem),
+    radial-gradient(circle at 90% 85%, rgba(78, 151, 145, 0.07), transparent 28rem),
+    #101c23;
 }
 
 .projects-container {
@@ -35,7 +35,7 @@ $theme-colors: (
 
 .projects-heading > p {
   margin: 0 0 0.85rem;
-  color: #8fb9d6;
+  color: #7d9fb4;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -44,7 +44,7 @@ $theme-colors: (
 
 .projects-heading h2 {
   margin: 0;
-  color: #f8fbfc;
+  color: #e7edf0;
   font-size: clamp(2.5rem, 6vw, 4.75rem);
   font-weight: 600;
   letter-spacing: -0.055em;
@@ -55,7 +55,7 @@ $theme-colors: (
   display: block;
   max-width: 560px;
   margin-top: 1.4rem;
-  color: #aebec6;
+  color: #8fa0a9;
   font-size: clamp(1rem, 2vw, 1.15rem);
   line-height: 1.7;
 }
@@ -68,9 +68,9 @@ $theme-colors: (
 
 .project-card {
   overflow: hidden;
-  color: #192a33;
-  background: #f3f5f3;
-  border: 1px solid rgba(255, 255, 255, 0.13);
+  color: #dce6ea;
+  background: #192831;
+  border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 1.25rem;
   box-shadow: 0 18px 48px rgba(3, 15, 21, 0.24);
   transition: transform 180ms ease, box-shadow 180ms ease;
@@ -87,11 +87,9 @@ $theme-colors: (
   aspect-ratio: 16 / 10;
   place-items: center;
   overflow: hidden;
-  padding: 0.85rem;
-  background:
-    linear-gradient(135deg, rgba(75, 115, 153, 0.1), rgba(255, 255, 255, 0.5)),
-    #e6ebeb;
-  border-bottom: 1px solid #dce3e3;
+  padding: 0;
+  background: #101a20;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .project-media img {
@@ -99,8 +97,8 @@ $theme-colors: (
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 0.65rem;
-  box-shadow: 0 8px 24px rgba(21, 42, 52, 0.12);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .project-content {
@@ -114,7 +112,7 @@ $theme-colors: (
 
 .project-copy h3 {
   margin: 0;
-  color: #152a34;
+  color: #eef3f5;
   font-size: clamp(1.35rem, 3vw, 1.75rem);
   font-weight: 700;
   letter-spacing: -0.025em;
@@ -122,39 +120,21 @@ $theme-colors: (
 
 .project-copy p {
   margin: 0.8rem 0 0;
-  color: #63737b;
+  color: #9babb3;
   line-height: 1.65;
 }
 
 .project-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 1rem;
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.project-tags li {
-  padding: 0.38rem 0.65rem;
-  color: #486877;
-  background: #e2e9e9;
-  border-radius: 999px;
-  font-size: 0.72rem;
-  font-weight: 600;
 }
 
 .project-link {
   flex: 0 0 auto;
   padding: 0.72rem 0;
-  color: #234f69;
+  color: #9bc2d8;
   background: transparent;
   border: 0;
   font-weight: 700;
