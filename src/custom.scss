@@ -109,11 +109,12 @@ a {
 
 .hero-section {
   position: relative;
-  min-height: 100svh;
+  height: 100svh;
+  min-height: 580px;
   display: grid;
   place-items: center;
   overflow: hidden;
-  padding: 7.5rem 1.5rem 5rem;
+  padding: 5.5rem 1.5rem 2rem;
   color: #f4f1f8;
   background:
     linear-gradient(145deg, rgba(75, 115, 153, 0.08), transparent 45%),
@@ -153,9 +154,9 @@ a {
 
 .portrait-frame {
   position: relative;
-  width: clamp(250px, 35vw, 430px);
+  width: clamp(210px, 36vh, 380px);
   aspect-ratio: 1;
-  margin-bottom: clamp(2rem, 5vw, 3.25rem);
+  margin-bottom: clamp(1rem, 2.5vh, 2rem);
   overflow: hidden;
   background: #1c2831;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -180,7 +181,7 @@ a {
 }
 
 .hero-kicker {
-  margin: 0 0 0.65rem;
+  margin: 0 0 clamp(0.35rem, 1vh, 0.65rem);
   color: #b5cad7;
   font-size: 0.86rem;
   font-weight: 700;
@@ -192,20 +193,20 @@ a {
   max-width: 750px;
   margin: 0;
   color: #f5f2f8;
-  font-size: clamp(2.8rem, 7vw, 5.8rem);
+  font-size: clamp(2.6rem, min(5.5vw, 7vh), 5.2rem);
   font-weight: 650;
   letter-spacing: -0.065em;
   line-height: 0.98;
 }
 
 .hero-copy {
-  margin: 1.3rem 0 0;
+  margin: clamp(0.8rem, 1.8vh, 1.3rem) 0 0;
   color: #bdc5d0;
   font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 .hero-actions {
-  margin-top: 2rem;
+  margin-top: clamp(1.2rem, 2.5vh, 2rem);
   display: flex;
   gap: 0.8rem;
 }
@@ -393,11 +394,12 @@ a {
   }
 
   .hero-section {
-    padding: 6rem 1.1rem 4.5rem;
+    min-height: 620px;
+    padding: 5rem 1.1rem 2rem;
   }
 
   .portrait-frame {
-    width: min(72vw, 300px);
+    width: min(64vw, 34vh, 280px);
   }
 
   .hero-actions {
