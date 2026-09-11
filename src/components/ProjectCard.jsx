@@ -17,7 +17,7 @@ const ProjectCard = ({ imgUrl, title, buttonUrl, description }) => {
         <div className="project-footer">
           <button
             className="project-link"
-            onClick={() => window.open(buttonUrl, "_self")}
+            onClick={() => window.open(buttonUrl, "_blank", "noopener,noreferrer")}
           >
             View project <span aria-hidden="true">↗</span>
           </button>
