@@ -7,9 +7,9 @@ test("the NFL Season Tracker project opens the current dashboard", () => {
   try {
     render(<Projects />);
     const card = screen.getByText("NFL Season Tracker").closest(".card");
-    fireEvent.click(within(card).getByRole("button", { name: "Try it!" }));
+    fireEvent.click(within(card).getByRole("button", { name: /View project/ }));
     expect(open).toHaveBeenCalledWith("nfl-season-tracker-v3/", "_self");
-    expect(screen.getAllByRole("button", { name: "Try it!" })).toHaveLength(6);
+    expect(screen.getAllByRole("button", { name: /View project/ })).toHaveLength(6);
   } finally {
     open.mockRestore();
   }
@@ -20,7 +20,7 @@ test("Secret Santa Coordinator opens the Cloudflare app", () => {
   try {
     render(<Projects />);
     const card = screen.getByText("Secret Santa Coordinator").closest(".card");
-    fireEvent.click(within(card).getByRole("button", { name: "Try it!" }));
+    fireEvent.click(within(card).getByRole("button", { name: /View project/ }));
     expect(open).toHaveBeenCalledWith(
       "https://secret-santa-coordinator-v1.daniel-beachy.workers.dev/",
       "_self"
@@ -35,7 +35,7 @@ test("Sunday HQ opens the connected Cloudflare dashboard", () => {
   try {
     render(<Projects />);
     const card = screen.getByText("Sunday HQ").closest(".card");
-    fireEvent.click(within(card).getByRole("button", { name: "Try it!" }));
+    fireEvent.click(within(card).getByRole("button", { name: /View project/ }));
     expect(open).toHaveBeenCalledWith(
       "https://fantasy-dashboard-v1.daniel-beachy.workers.dev/",
       "_self"

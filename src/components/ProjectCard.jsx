@@ -1,34 +1,34 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
-
-const ProjectCard = ({ imgUrl, title, buttonUrl }) => {
+const ProjectCard = ({ imgUrl, title, buttonUrl, description, tags }) => {
   return (
-    <Card
-      style={{ width: "24rem" }}
-      className="bg-primary m-4 p-0 text-light-blue"
-    >
-      <Card.Body className="d-flex flex-column align-items-center justify-content-between">
-        <Card.Title>{title}</Card.Title>
+    <article className="card project-card">
+      <div className="project-media">
         <img
           src={imgUrl}
-          alt=""
-          style={{
-            aspectRatio: "16 / 9",
-            objectFit: "cover",
-            borderRadius: "4px",
-            width: "100%",
-            marginBottom: "8px",
-          }}
+          alt={`${title} project preview`}
+          loading="lazy"
         />
-        <Button
-          className="m-8"
-          variant="secondary"
-          onClick={() => window.open(buttonUrl, "_self")}
-        >
-          Try it!
-        </Button>
-      </Card.Body>
-    </Card>
+      </div>
+      <div className="project-content">
+        <div className="project-copy">
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
+        <div className="project-footer">
+          <ul className="project-tags" aria-label={`${title} technologies`}>
+            {tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+          <button
+            className="project-link"
+            onClick={() => window.open(buttonUrl, "_self")}
+          >
+            View project <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </div>
+    </article>
   );
 };
 
