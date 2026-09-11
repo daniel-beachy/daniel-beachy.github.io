@@ -11,16 +11,16 @@ const ProjectCard = ({ imgUrl, title, buttonUrl, description }) => {
       </div>
       <div className="project-content">
         <div className="project-copy">
-          <h3>{title}</h3>
+          <div className="project-title-row">
+            <h3>{title}</h3>
+            <button
+              className="project-link"
+              onClick={() => window.open(buttonUrl, "_blank", "noopener,noreferrer")}
+            >
+              View project <span aria-hidden="true">↗</span>
+            </button>
+          </div>
           <p>{description}</p>
-        </div>
-        <div className="project-footer">
-          <button
-            className="project-link"
-            onClick={() => window.open(buttonUrl, "_blank", "noopener,noreferrer")}
-          >
-            View project <span aria-hidden="true">↗</span>
-          </button>
         </div>
       </div>
     </article>

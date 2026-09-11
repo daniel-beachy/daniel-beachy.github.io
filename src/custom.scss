@@ -325,12 +325,14 @@ a {
 }
 
 .project-content {
-  min-height: 245px;
-  padding: clamp(1.35rem, 3vw, 1.8rem);
+  padding: clamp(1rem, 2vw, 1.35rem);
+}
+
+.project-title-row {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  gap: 1.75rem;
+  gap: 1rem;
 }
 
 .project-copy h3 {
@@ -342,21 +344,14 @@ a {
 }
 
 .project-copy p {
-  margin: 0.8rem 0 0;
+  margin: 0.55rem 0 0;
   color: #9babb3;
-  line-height: 1.65;
-}
-
-.project-footer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 1rem;
+  line-height: 1.45;
 }
 
 .project-link {
   flex: 0 0 auto;
-  padding: 0.72rem 0;
+  padding: 0.35rem 0;
   color: #9bc2d8;
   background: transparent;
   border: 0;
@@ -416,12 +411,8 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .project-content {
-    min-height: 0;
-  }
-
-  .project-footer {
-    align-items: flex-end;
+  .project-title-row {
+    gap: 0.75rem;
   }
 }
 
