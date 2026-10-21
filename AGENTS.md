@@ -28,16 +28,18 @@ repo. Never edit a project's code from here unless asked.
    - Open the URL and check that it loads before you add the card.
 2. **Make the thumbnail** (spec below):
    `scripts/screenshot.sh "<live url>" <slug>`. Then **open the PNG and look at it**.
-3. **Add the card** to the *end* of the `projects` array in `Projects.jsx` (newest last), and import
-   the image at the top:
+3. **Add the card** to the `projects` array in `Projects.jsx` and import the image at the top. Ask
+   Daniel where it goes in the order (see "Card order"); if he doesn't say, put it last.
    ```js
    import deepRoots from "../img/deep-roots-image.png";
    // …
    { imgUrl: deepRoots, title: "Deep Roots", buttonUrl: "time-tree-v1/",
-     description: "Pick any two living things and find out how long ago they were family." },
+     description: "Pick any two living things and find out how long ago they were family.",
+     builtWith: { kind: "ai", label: "Claude Opus 5.5" } },
    ```
-4. **Update the tests** in `Projects.test.jsx`: change the `toHaveLength(N)` card count and add a test
-   that clicking the new card's button opens its URL (copy an existing test).
+4. **Update the tests** in `Projects.test.jsx`: change the `toHaveLength(N)` card count, update the
+   expected title order in the "chosen order" test, and add a test that clicking the new card's
+   button opens its URL (copy an existing test).
 5. **Verify**, then **deploy** (sections below).
 
 ### Thumbnail spec
@@ -67,6 +69,39 @@ The script handles size, scale, chrome and wait time. Dark mode is forced via th
   Sundays."
 - The grid has 2 columns, so an odd number of cards leaves one alone in the last row. Mention this
   to Daniel rather than changing the layout unasked.
+
+### Card order
+
+The order is Daniel's choice, not chronological: the two hand-coded originals (N-Queens, Sorting
+Visualizer) stay first, then the AI-built projects from favorite to least favorite. As of
+2026-10-21 that is: Deep Roots, Secret Santa Coordinator, NFL Season Tracker, Sunday HQ, FlossForge.
+Never reorder unasked.
+
+### "Built with" label (required on every card)
+
+Daniel wants it to be clear which projects he coded himself and which an AI model wrote. Every card
+has `builtWith: { kind, label }`, shown as a small pill on the thumbnail's bottom-left corner:
+
+- `kind: "hand"` with `label: "Hand-coded · <year>"` means written by Daniel without AI. Only N-Queens
+  and Sorting (2024) qualify. Later Copilot maintenance commits don't change that.
+- `kind: "ai"` with the **specific model** as the label, e.g. `"Claude Opus 5.5"`, `"GPT-5.6 Sol"`.
+  Name the model that wrote most of the code. For a project you build in this session, that's you.
+  Keep the label short (it has to fit on a phone-width card).
+- If the model can't be verified, use the tool name (e.g. `"GitHub Copilot"`) rather than guessing,
+  and tell Daniel.
+
+How to find it for a past project:
+- Claude Code: the `Co-Authored-By: Claude <model>` commit trailer names the model.
+- GitHub Copilot CLI: commits carry `Co-authored-by: Copilot` and often `Copilot-Session: <id>`.
+  Sessions run on this Mac are logged in `~/.copilot/session-state/<id>/events.jsonl`; its
+  `session.start` event has `selectedModel`. You can also match the repo's first commit time to a
+  session's `created_at` in `~/.copilot/session-store.db`. Sessions from Daniel's work laptop
+  (commits by `danielbeachy@microsoft.com`) are not on this machine.
+
+Current provenance: Deep Roots is Claude Opus 5.5 (Claude Code). Secret Santa is GPT-5.6 Sol
+(Copilot CLI session `e31981e5…`, started 7 minutes before the first commit). NFL Season Tracker,
+Sunday HQ and FlossForge were built with Copilot CLI on the work laptop, and their models are
+unverified.
 
 ### Project-side convention
 

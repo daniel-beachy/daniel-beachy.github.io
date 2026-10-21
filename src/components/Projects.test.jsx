@@ -62,3 +62,21 @@ test("Deep Roots opens the GitHub Pages app", () => {
     open.mockRestore();
   }
 });
+
+test("cards appear in the chosen order, each saying how it was built", () => {
+  render(<Projects />);
+  const titles = screen.getAllByRole("heading", { level: 3 }).map((h) => h.textContent);
+  expect(titles).toEqual([
+    "N-Queens",
+    "Sorting Visualizer",
+    "Deep Roots",
+    "Secret Santa Coordinator",
+    "NFL Season Tracker",
+    "Sunday HQ",
+    "FlossForge",
+  ]);
+  const deepRoots = screen.getByText("Deep Roots").closest(".card");
+  within(deepRoots).getByText("Claude Opus 5.5");
+  const nqueens = screen.getByText("N-Queens").closest(".card");
+  within(nqueens).getByText("Hand-coded · 2024");
+});
