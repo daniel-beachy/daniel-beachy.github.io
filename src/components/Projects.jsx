@@ -6,6 +6,7 @@ import nflTracker from "../img/nfl-tracker-image.png";
 import flossforge from "../img/flossforge-image.png";
 import sundayHq from "../img/sunday-hq-image.png";
 import secretSanta from "../img/secret-santa-coordinator-image.png";
+import deepRoots from "../img/deep-roots-image.png";
 
 const Projects = () => {
   const projects = [
@@ -44,6 +45,12 @@ const Projects = () => {
       title: "Secret Santa Coordinator",
       buttonUrl: "https://secret-santa-coordinator-v1.daniel-beachy.workers.dev/",
       description: "Set up a Secret Santa without anyone accidentally seeing the whole list.",
+    },
+    {
+      imgUrl: deepRoots,
+      title: "Deep Roots",
+      buttonUrl: "time-tree-v1/",
+      description: "Pick any two living things and find out how long ago they were family.",
     },
   ];
 

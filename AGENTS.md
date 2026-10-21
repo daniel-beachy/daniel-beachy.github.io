@@ -1,0 +1,102 @@
+# Portfolio site: instructions for agents
+
+This is Daniel Beachy's portfolio, live at **https://daniel-beachy.github.io**. It is a Create React
+App (React 18 + react-bootstrap + Sass) site in the repo `daniel-beachy/daniel-beachy.github.io`.
+Most requests are "add my new project as a card" or "update a card". Follow the checklist below.
+
+## Where things are
+
+| What | Where |
+| --- | --- |
+| Project list (cards) | `src/components/Projects.jsx` (one object per card) |
+| Card markup | `src/components/ProjectCard.jsx` |
+| Card tests | `src/components/Projects.test.jsx` |
+| Thumbnails | `src/img/<slug>-image.png` |
+| Styles | `src/custom.scss` (`.projects-grid` is 2 columns, 1 on phones) |
+| Thumbnail tool | `scripts/screenshot.sh` |
+| Deploy | `.github/workflows/deploy.yml` (every push to `main`) |
+
+Each project lives in its own folder next to this one (`~/AI_PROJECTS/<repo>`) and its own GitHub
+repo. Never edit a project's code from here unless asked.
+
+## Adding a project card
+
+1. **Find the project's live URL.**
+   - GitHub Pages project site (`daniel-beachy.github.io/<repo>/`): use the **relative** URL
+     `"<repo>/"` with the trailing slash, as for `flossforge/` and `nfl-season-tracker-v3/`.
+   - Cloudflare Workers or another host: use the full `https://…` URL.
+   - Open the URL and check that it loads before you add the card.
+2. **Make the thumbnail** (spec below):
+   `scripts/screenshot.sh "<live url>" <slug>`. Then **open the PNG and look at it**.
+3. **Add the card** to the *end* of the `projects` array in `Projects.jsx` (newest last), and import
+   the image at the top:
+   ```js
+   import deepRoots from "../img/deep-roots-image.png";
+   // …
+   { imgUrl: deepRoots, title: "Deep Roots", buttonUrl: "time-tree-v1/",
+     description: "Pick any two living things and find out how long ago they were family." },
+   ```
+4. **Update the tests** in `Projects.test.jsx`: change the `toHaveLength(N)` card count and add a test
+   that clicking the new card's button opens its URL (copy an existing test).
+5. **Verify**, then **deploy** (sections below).
+
+### Thumbnail spec
+
+Every thumbnail must match the others, or the grid looks inconsistent.
+
+- **1200 × 750 px PNG** (16:10, the card's `aspect-ratio`), at **1× scale**. A retina capture
+  (2400×1500) is the wrong size.
+- **The page only**: no browser chrome, scrollbars, cursor, or OS window.
+- **Dark mode.** All current thumbnails are dark. If an app has a light/dark toggle, capture it dark.
+- **Top of the page, with the app's own header visible.** Pick the most representative first screen:
+  usually the landing view, or a deep link to a meaningful result if the landing page is mostly
+  empty (Deep Roots uses its blue-whale-vs-hippo comparison).
+- Everything loaded: no spinners, empty states, or missing photos. Use real-looking data, never
+  personal data.
+- Use `src/img/<slug>-image.png` with a kebab-case slug, and keep it under about 400 KB.
+
+The script handles size, scale, chrome and wait time. Dark mode is forced via the
+`prefers-color-scheme` flag. Check the result yourself with an image viewer or your Read tool.
+
+### Card copy style
+
+- **Title:** the app's display name ("Sunday HQ", "Deep Roots"), not the repo name.
+- **Description:** one short, casual sentence of about 50–80 characters, ending with a period. Say
+  what it does for the visitor, with no tech stack and no marketing words. Examples:
+  "A little visual solver for the N-Queens puzzle." "All the fantasy football stuff I want to see on
+  Sundays."
+- The grid has 2 columns, so an odd number of cards leaves one alone in the last row. Mention this
+  to Daniel rather than changing the layout unasked.
+
+### Project-side convention
+
+Each project app has a **"Portfolio" link in its header** pointing to `https://daniel-beachy.github.io/`.
+If a new project lacks one, add it in the project's own repo (matching that app's style) and
+redeploy it **before** taking the thumbnail.
+
+## Verify locally
+
+```bash
+npm ci                                       # first time only
+CI=true npx react-scripts test --watchAll=false
+BROWSER=none PORT=3000 npm start             # http://localhost:3000
+```
+
+Scroll to "Personal projects". Check the new card at desktop width and phone width (one column). The
+image should fill the card's media area with no letterboxing, and the "View project" button should
+open the right URL.
+
+## Deploy
+
+```bash
+git add -A && git commit -m "Add <Project> project card"
+git push origin main
+gh run watch "$(gh run list --limit 1 --json databaseId -q '.[0].databaseId')" --exit-status
+```
+
+The workflow runs `npm ci` and `npm run build` with `CI=false` (CRA would otherwise fail the build on
+lint warnings), then publishes `build/` to Pages. Never commit `build/`, which is gitignored. After the
+run succeeds, load https://daniel-beachy.github.io (hard refresh) and click the new card's button on
+the live site.
+
+Commits go straight to `main`; this repo doesn't use PRs.

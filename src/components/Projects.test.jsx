@@ -13,7 +13,7 @@ test("the NFL Season Tracker project opens the current dashboard", () => {
       "_blank",
       "noopener,noreferrer"
     );
-    expect(screen.getAllByRole("button", { name: /View project/ })).toHaveLength(6);
+    expect(screen.getAllByRole("button", { name: /View project/ })).toHaveLength(7);
   } finally {
     open.mockRestore();
   }
@@ -46,6 +46,18 @@ test("Sunday HQ opens the connected Cloudflare dashboard", () => {
       "_blank",
       "noopener,noreferrer"
     );
+  } finally {
+    open.mockRestore();
+  }
+});
+
+test("Deep Roots opens the GitHub Pages app", () => {
+  const open = jest.spyOn(window, "open").mockImplementation(() => null);
+  try {
+    render(<Projects />);
+    const card = screen.getByText("Deep Roots").closest(".card");
+    fireEvent.click(within(card).getByRole("button", { name: /View project/ }));
+    expect(open).toHaveBeenCalledWith("time-tree-v1/", "_blank", "noopener,noreferrer");
   } finally {
     open.mockRestore();
   }
