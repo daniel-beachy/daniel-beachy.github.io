@@ -98,10 +98,14 @@ How to find it for a past project:
   session's `created_at` in `~/.copilot/session-store.db`. Sessions from Daniel's work laptop
   (commits by `danielbeachy@microsoft.com`) are not on this machine.
 
-Current provenance: Deep Roots is Claude Opus 5.5 (Claude Code). Secret Santa is GPT-5.6 Sol
-(Copilot CLI session `e31981e5…`, started 7 minutes before the first commit). NFL Season Tracker,
-Sunday HQ and FlossForge were built with Copilot CLI on the work laptop, and their models are
-unverified.
+Current provenance:
+- Deep Roots: Claude Opus 5.5 (Claude Code).
+- Secret Santa: GPT-5.6 Sol (Copilot CLI session `e31981e5…`, started 7 minutes before the first
+  commit).
+- NFL Season Tracker and Sunday HQ: GPT-6 Astra (Copilot CLI on the work laptop, confirmed by Daniel).
+- FlossForge: Claude Opus 5 (Copilot CLI on the work laptop, confirmed by Daniel). Daniel isn't happy
+  with it and plans to redo it with Opus 5.5. When that happens, update the card's URL, thumbnail and
+  label.
 
 ### Project-side convention
 

@@ -46,21 +46,21 @@ const Projects = () => {
       title: "NFL Season Tracker",
       buttonUrl: "nfl-season-tracker-v3/",
       description: "A place to keep an eye on the NFL season and how it is shaping up.",
-      builtWith: { kind: "ai", label: "GitHub Copilot" },
+      builtWith: { kind: "ai", label: "GPT-6 Astra" },
     },
     {
       imgUrl: sundayHq,
       title: "Sunday HQ",
       buttonUrl: "https://fantasy-dashboard-v1.daniel-beachy.workers.dev/",
       description: "All the fantasy football stuff I want to see on Sundays.",
-      builtWith: { kind: "ai", label: "GitHub Copilot" },
+      builtWith: { kind: "ai", label: "GPT-6 Astra" },
     },
     {
       imgUrl: flossforge,
       title: "FlossForge",
       buttonUrl: "flossforge/",
       description: "Describe a friendship bracelet and get instructions for making it.",
-      builtWith: { kind: "ai", label: "GitHub Copilot" },
+      builtWith: { kind: "ai", label: "Claude Opus 5" },
     },
   ];
 
