@@ -13,7 +13,7 @@ test("the NFL Season Tracker project opens the current dashboard", () => {
       "_blank",
       "noopener,noreferrer"
     );
-    expect(screen.getAllByRole("button", { name: /View project/ })).toHaveLength(7);
+    expect(screen.getAllByRole("button", { name: /View project/ })).toHaveLength(8);
   } finally {
     open.mockRestore();
   }
@@ -63,6 +63,18 @@ test("Deep Roots opens the GitHub Pages app", () => {
   }
 });
 
+test("Genome Dashboard opens the GitHub Pages demo", () => {
+  const open = jest.spyOn(window, "open").mockImplementation(() => null);
+  try {
+    render(<Projects />);
+    const card = screen.getByText("Genome Dashboard").closest(".card");
+    fireEvent.click(within(card).getByRole("button", { name: /View project/ }));
+    expect(open).toHaveBeenCalledWith("wgs-analysis-v1/", "_blank", "noopener,noreferrer");
+  } finally {
+    open.mockRestore();
+  }
+});
+
 test("cards appear in the chosen order, each saying how it was built", () => {
   render(<Projects />);
   const titles = screen.getAllByRole("heading", { level: 3 }).map((h) => h.textContent);
@@ -74,6 +86,7 @@ test("cards appear in the chosen order, each saying how it was built", () => {
     "NFL Season Tracker",
     "Sunday HQ",
     "FlossForge",
+    "Genome Dashboard",
   ]);
   const deepRoots = screen.getByText("Deep Roots").closest(".card");
   within(deepRoots).getByText("Claude Opus 5.5");

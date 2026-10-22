@@ -7,6 +7,7 @@ import flossforge from "../img/flossforge-image.png";
 import sundayHq from "../img/sunday-hq-image.png";
 import secretSanta from "../img/secret-santa-coordinator-image.png";
 import deepRoots from "../img/deep-roots-image.png";
+import genomeDashboard from "../img/genome-dashboard-image.png";
 
 const Projects = () => {
   // Display order is deliberate (Daniel's call), not chronological: the two hand-coded originals
@@ -61,6 +62,13 @@ const Projects = () => {
       buttonUrl: "flossforge/",
       description: "Describe a friendship bracelet and get instructions for making it.",
       builtWith: { kind: "ai", label: "Claude Opus 5" },
+    },
+    {
+      imgUrl: genomeDashboard,
+      title: "Genome Dashboard",
+      buttonUrl: "wgs-analysis-v1/",
+      description: "Explore a real human genome, with how sure we are about every finding.",
+      builtWith: { kind: "ai", label: "Claude Opus 5.5" },
     },
   ];
 
