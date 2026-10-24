@@ -131,9 +131,11 @@ Current provenance:
 
 ### Project-side convention
 
-Each project app has a **"Portfolio" link in its header** pointing to `https://daniel-beachy.github.io/`.
-If a new project lacks one, add it in the project's own repo (matching that app's style) and
-redeploy it **before** taking the thumbnail.
+Each project app has a **"More projects" link in its header** pointing to
+`https://daniel-beachy.github.io/`. Use exactly that wording, not "Portfolio" (Daniel renamed it in
+every app on 2026-10-23). An icon-only home link (N-Queens, Sorting) is fine as is. If a new project
+lacks the link, add it in the project's own repo (matching that app's style), check that it fits at
+phone width, and redeploy it **before** taking the thumbnail.
 
 ## Verify locally
 
