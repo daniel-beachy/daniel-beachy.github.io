@@ -27,7 +27,9 @@ repo. Never edit a project's code from here unless asked.
    - Cloudflare Workers or another host: use the full `https://…` URL.
    - Open the URL and check that it loads before you add the card.
 2. **Make the thumbnail** (spec below):
-   `scripts/screenshot.sh "<live url>" <slug>`. Then **open the PNG and look at it**.
+   `scripts/screenshot.sh "<live url>" <slug>`. Then **open the PNG and look at it**. If you're not
+   sure which view Daniel would find most eye-catching, capture several candidates and let him pick
+   before you go on (see "Pick the most eye-catching view").
 3. **Add the card** to the `projects` array in `Projects.jsx` and import the image at the top. Ask
    Daniel where it goes in the order (see "Card order"); if he doesn't say, put it last.
    ```js
@@ -44,15 +46,29 @@ repo. Never edit a project's code from here unless asked.
 
 ### Thumbnail spec
 
-Every thumbnail must match the others, or the grid looks inconsistent.
+The thumbnail is what makes a visitor click, so it should be **as eye-catching as possible and
+show off the app's most visually appealing feature**, not just whatever the landing page shows
+first. Every thumbnail must also match the others in format, or the grid looks inconsistent.
+
+#### Pick the most eye-catching view
+
+- Look around the app first: the richest chart, map, tree, board or animation frame usually beats a
+  form, a list or a mostly empty landing page. Prefer a screen full of color and real-looking
+  content.
+- Reach that view with a deep link (URL path, hash or query string) so the script can capture it.
+- **If you aren't sure which view Daniel would find most visually appealing, don't guess.** Capture
+  2–4 candidates with different slugs (e.g. `<slug>-option-a`, `<slug>-option-b`), look at each one
+  yourself, then show them all to Daniel with a line on what each shows, and wait for his pick.
+  Rename the chosen file to `src/img/<slug>-image.png` and delete the rest before committing.
+
+#### Format
 
 - **1200 × 750 px PNG** (16:10, the card's `aspect-ratio`), at **1× scale**. A retina capture
   (2400×1500) is the wrong size.
 - **The page only**: no browser chrome, scrollbars, cursor, or OS window.
 - **Dark mode.** All current thumbnails are dark. If an app has a light/dark toggle, capture it dark.
-- **Top of the page, with the app's own header visible.** Pick the most representative first screen:
-  usually the landing view, or a deep link to a meaningful result if the landing page is mostly
-  empty (Deep Roots uses its blue-whale-vs-hippo comparison).
+- **Top of the page, with the app's own header visible**, showing the view chosen above (Deep Roots
+  uses a deep link to its blue-whale-vs-hippo comparison rather than its landing page).
 - Everything loaded: no spinners, empty states, or missing photos. Use real-looking data, never
   personal data.
 - Use `src/img/<slug>-image.png` with a kebab-case slug, and keep it under about 400 KB.
