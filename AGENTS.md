@@ -91,7 +91,8 @@ The script handles size, scale, chrome and wait time. Dark mode is forced via th
 The order is Daniel's choice, not chronological: the two hand-coded originals (N-Queens, Sorting
 Visualizer) stay first, then the AI-built projects from favorite to least favorite. As of
 2026-10-22 that is: Deep Roots, Secret Santa Coordinator, NFL Season Tracker, Sunday HQ, FlossForge,
-Genome Dashboard (added last on 2026-10-22 with no position given). Never reorder unasked.
+Genome Dashboard (added last on 2026-10-22 with no position given), Game Pass Companion (added last on
+2026-10-23 with no position given). Never reorder unasked.
 
 ### "Built with" label (required on every card)
 
@@ -116,6 +117,8 @@ How to find it for a past project:
 
 Current provenance:
 - Deep Roots: Claude Opus 5.5 (Claude Code).
+- Game Pass Companion (`game-pass-companion-v1`): Claude Opus 5.5 (Claude Code). The thumbnail is the
+  It Takes Two detail view, showing a Claude-written note.
 - Genome Dashboard (`wgs-analysis-v1`): Claude Opus 5.5. Steps 0–8 came from Copilot CLI session `01783dc9…`
   (Opus 5.5, with Claude Sonnet 5 subagents), later steps from Claude Code. The card shows the public HG002
   demo, never Daniel's own genome.

@@ -8,6 +8,7 @@ import sundayHq from "../img/sunday-hq-image.png";
 import secretSanta from "../img/secret-santa-coordinator-image.png";
 import deepRoots from "../img/deep-roots-image.png";
 import genomeDashboard from "../img/genome-dashboard-image.png";
+import gamePassCompanion from "../img/game-pass-companion-image.png";
 
 const Projects = () => {
   // Display order is deliberate (Daniel's call), not chronological: the two hand-coded originals
@@ -68,6 +69,13 @@ const Projects = () => {
       title: "Genome Dashboard",
       buttonUrl: "wgs-analysis-v1/",
       description: "Explore a real human genome, with how sure we are about every finding.",
+      builtWith: { kind: "ai", label: "Claude Opus 5.5" },
+    },
+    {
+      imgUrl: gamePassCompanion,
+      title: "Game Pass Companion",
+      buttonUrl: "game-pass-companion-v1/",
+      description: "What to play on Game Pass together, and what to finish before it leaves.",
       builtWith: { kind: "ai", label: "Claude Opus 5.5" },
     },
   ];
