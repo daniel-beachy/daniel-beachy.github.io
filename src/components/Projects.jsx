@@ -10,6 +10,7 @@ import deepRoots from "../img/deep-roots-image.png";
 import genomeDashboard from "../img/genome-dashboard-image.png";
 import gamePassCompanion from "../img/game-pass-companion-image.png";
 import gospelsExplorer from "../img/gospels-explorer-image.png";
+import cruiseGuide from "../img/cruise-guide-image.png";
 
 const Projects = () => {
   // Display order is deliberate (Daniel's call), not chronological: the two hand-coded originals
@@ -85,6 +86,13 @@ const Projects = () => {
       buttonUrl: "flossforge/",
       description: "Describe a friendship bracelet and get instructions for making it.",
       builtWith: { kind: "ai", label: "Claude Opus 5" },
+    },
+    {
+      imgUrl: cruiseGuide,
+      title: "Cruise Guide",
+      buttonUrl: "cruise-guide-v1/",
+      description: "An offline cruise guide.",
+      builtWith: { kind: "ai", label: "Claude Opus 5.5" },
     },
   ];
 

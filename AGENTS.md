@@ -91,7 +91,8 @@ The script handles size, scale, chrome and wait time. Dark mode is forced via th
 The order is Daniel's choice, not chronological: the two hand-coded originals (N-Queens, Sorting
 Visualizer) stay first, then the AI-built projects from favorite to least favorite. As of
 2026-10-23 (reordered by Daniel) that is: Deep Roots, Genome Dashboard, Gospels Explorer, Game Pass
-Companion, NFL Season Tracker, Sunday HQ, Secret Santa Coordinator, FlossForge. Never reorder unasked.
+Companion, NFL Season Tracker, Sunday HQ, Secret Santa Coordinator, FlossForge, Cruise Guide (added
+2026-10-25, making 11 cards, so it sits alone in the last row). Never reorder unasked.
 
 ### "Built with" label (required on every card)
 
@@ -124,6 +125,10 @@ Current provenance:
 - Genome Dashboard (`wgs-analysis-v1`): Claude Opus 5.5. Steps 0–8 came from Copilot CLI session `01783dc9…`
   (Opus 5.5, with Claude Sonnet 5 subagents), later steps from Claude Code. The card shows the public HG002
   demo, never Daniel's own genome.
+- Cruise Guide (`cruise-guide-v1`): Claude Opus 5.5 (claude.ai chat, deployed with Claude Code). The
+  thumbnail is the dark-mode Trip tab route chart, scrolled to its southern half (Cabo, Mazatlán,
+  Puerto Vallarta); Daniel picked it over the whole-chart view. The guide deliberately has **no "More projects"
+  link** (Daniel's call); don't add one.
 - Secret Santa: GPT-5.6 Sol (Copilot CLI session `e31981e5…`, started 7 minutes before the first
   commit).
 - NFL Season Tracker and Sunday HQ: GPT-6 Astra (Copilot CLI on the work laptop, confirmed by Daniel).
