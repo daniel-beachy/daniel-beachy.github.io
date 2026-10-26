@@ -91,7 +91,7 @@ const Projects = () => {
       imgUrl: cruiseGuide,
       title: "Cruise Guide",
       buttonUrl: "cruise-guide-v1/",
-      description: "An offline cruise guide.",
+      description: "An offline Mexican Riviera cruise guide.",
       builtWith: { kind: "ai", label: "Claude Opus 5.5" },
     },
   ];
