@@ -14,6 +14,7 @@ Most requests are "add my new project as a card" or "update a card". Follow the 
 | Thumbnails | `src/img/<slug>-image.png` |
 | Styles | `src/custom.scss` (`.projects-grid` is 2 columns, 1 on phones) |
 | Thumbnail tool | `scripts/screenshot.sh` |
+| Link preview (Open Graph) | `public/og-image.png`, tags in `public/index.html`, source and render command in `scripts/og-image.html` |
 | Deploy | `.github/workflows/deploy.yml` (every push to `main`) |
 
 Each project lives in its own folder next to this one (`~/AI_PROJECTS/<repo>`) and its own GitHub
