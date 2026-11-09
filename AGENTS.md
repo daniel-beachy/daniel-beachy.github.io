@@ -24,7 +24,7 @@ repo. Never edit a project's code from here unless asked.
 
 1. **Find the project's live URL.**
    - GitHub Pages project site (`daniel-beachy.github.io/<repo>/`): use the **relative** URL
-     `"<repo>/"` with the trailing slash, as for `flossforge/` and `nfl-season-tracker-v3/`.
+     `"<repo>/"` with the trailing slash, as for `flossforge-v2/` and `nfl-season-tracker-v3/`.
    - Cloudflare Workers or another host: use the full `https://…` URL.
    - Open the URL and check that it loads before you add the card.
 2. **Make the thumbnail** (spec below):
@@ -133,9 +133,10 @@ Current provenance:
 - Secret Santa: GPT-5.6 Sol (Copilot CLI session `e31981e5…`, started 7 minutes before the first
   commit).
 - NFL Season Tracker and Sunday HQ: GPT-6 Astra (Copilot CLI on the work laptop, confirmed by Daniel).
-- FlossForge: Claude Opus 5 (Copilot CLI on the work laptop, confirmed by Daniel). Daniel isn't happy
-  with it and plans to redo it with Opus 5.5. When that happens, update the card's URL, thumbnail and
-  label.
+- FlossForge (`flossforge-v2`): Claude Opus 5.5 (Claude Code), a from-scratch rebuild that replaced
+  the v1 card on 2026-11-08. The thumbnail is the Big Blue Ombre design page (a LOVE pixel-grid
+  bracelet), quantized to 256 colors to stay under 400 KB. V1 (`flossforge/`, Claude Opus 5 via
+  Copilot CLI) is still live but no longer linked.
 
 ### Project-side convention
 

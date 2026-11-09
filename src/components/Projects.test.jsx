@@ -111,6 +111,18 @@ test("Cruise Guide opens the GitHub Pages guide", () => {
   }
 });
 
+test("FlossForge opens the v2 rebuild", () => {
+  const open = jest.spyOn(window, "open").mockImplementation(() => null);
+  try {
+    render(<Projects />);
+    const card = screen.getByText("FlossForge").closest(".card");
+    fireEvent.click(within(card).getByRole("button", { name: /View project/ }));
+    expect(open).toHaveBeenCalledWith("flossforge-v2/", "_blank", "noopener,noreferrer");
+  } finally {
+    open.mockRestore();
+  }
+});
+
 test("cards appear in the chosen order, each saying how it was built", () => {
   render(<Projects />);
   const titles = screen.getAllByRole("heading", { level: 3 }).map((h) => h.textContent);

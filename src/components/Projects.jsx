@@ -83,9 +83,9 @@ const Projects = () => {
     {
       imgUrl: flossforge,
       title: "FlossForge",
-      buttonUrl: "flossforge/",
+      buttonUrl: "flossforge-v2/",
       description: "Describe a friendship bracelet and get instructions for making it.",
-      builtWith: { kind: "ai", label: "Claude Opus 5" },
+      builtWith: { kind: "ai", label: "Claude Opus 5.5" },
     },
     {
       imgUrl: cruiseGuide,
