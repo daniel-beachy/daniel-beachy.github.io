@@ -134,9 +134,9 @@ Current provenance:
   commit).
 - NFL Season Tracker and Sunday HQ: GPT-6 Astra (Copilot CLI on the work laptop, confirmed by Daniel).
 - FlossForge (`flossforge-v2`): Claude Opus 5.5 (Claude Code), a from-scratch rebuild that replaced
-  the v1 card on 2026-11-08. The thumbnail is the Big Blue Ombre design page (a LOVE pixel-grid
-  bracelet), quantized to 256 colors to stay under 400 KB. V1 (`flossforge/`, Claude Opus 5 via
-  Copilot CLI) is still live but no longer linked.
+  the v1 card on 2026-11-08. The thumbnail is the Golden Meander design page (a gold Greek key on
+  navy); Daniel picked it over the Big Blue Ombre LOVE bracelet, which he found too loud. V1
+  (`flossforge/`, Claude Opus 5 via Copilot CLI) was archived on 2026-11-10.
 
 ### Project-side convention
 
